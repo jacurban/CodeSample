@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/user_info_toolbarLayout"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/user_info_label_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="label_birthday, label_cpf, label_phone, label_email, label_students, label_calendar" />
+
+    <TextView
+        android:id="@+id/label_birthday"
+        style="@style/CustomInfoLabel"
+        android:text="@string/nascimento_dp"
+        android:layout_marginTop="@dimen/pad_constraint"
+        android:layout_marginStart="@dimen/pad_constraint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_info_toolbarLayout" />
+
+    <TextView
+        android:id="@+id/user_info_birth_TXV"
+        style="@style/CustomInfoContent"
+        app:layout_constraintStart_toEndOf="@id/user_info_label_barrier"
+        app:layout_constraintTop_toTopOf="@+id/label_birthday"
+        tools:text="@string/nascimento_dp" />
+
+    <TextView
+        android:id="@+id/label_cpf"
+        style="@style/CustomInfoLabel"
+        android:text="@string/cpf_rg_dp"
+        app:layout_constraintStart_toStartOf="@id/label_birthday"
+        app:layout_constraintTop_toBottomOf="@id/user_info_birth_TXV" />
+
+    <TextView
+        android:id="@+id/user_info_cpf_TXV"
+        style="@style/CustomInfoContent"
+        app:layout_constraintStart_toEndOf="@id/user_info_label_barrier"
+        app:layout_constraintTop_toTopOf="@id/label_cpf"
+        tools:text="@string/cpf_rg_dp" />
+
+    <TextView
+        android:id="@+id/label_phone"
+        style="@style/CustomInfoLabel"
+        android:text="@string/telefone_dp"
+        app:layout_constraintStart_toStartOf="@id/label_birthday"
+        app:layout_constraintTop_toBottomOf="@id/label_cpf" />
+
+    <TextView
+        android:id="@+id/user_info_phone_TXV"
+        style="@style/CustomInfoContent"
+        app:layout_constraintStart_toEndOf="@id/user_info_label_barrier"
+        app:layout_constraintTop_toTopOf="@+id/label_phone"
+        tools:text="@string/telefone_dp" />
+
+    <TextView
+        android:id="@+id/label_email"
+        style="@style/CustomInfoLabel"
+        android:text="@string/email_dp"
+        app:layout_constraintStart_toStartOf="@id/label_birthday"
+        app:layout_constraintTop_toBottomOf="@id/label_phone" />
+
+    <TextView
+        android:id="@+id/user_info_email_TXV"
+        style="@style/CustomInfoContent"
+        app:layout_constraintStart_toEndOf="@id/user_info_label_barrier"
+        app:layout_constraintTop_toTopOf="@+id/label_email"
+        tools:text="@string/email_dp" />
+
+    <View
+        android:id="@+id/user_info_students_divisor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBlueSoft"
+        app:layout_constraintTop_toBottomOf="@id/user_info_email_TXV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/label_students"
+        style="@style/CustomInfoLabel"
+        android:text="@string/alunos_dp"
+        app:layout_constraintStart_toStartOf="@id/label_birthday"
+        app:layout_constraintTop_toBottomOf="@id/user_info_email_TXV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_info_students_RCV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/pad_constraint"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toEndOf="@id/user_info_label_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/label_students"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_list" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/user_info_students_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="user_info_students_divisor, label_students, user_info_students_RCV"/>
+
+    <View
+        android:id="@+id/user_info_calendar_divisor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBlueSoft"
+        app:layout_constraintTop_toBottomOf="@id/user_info_students_RCV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/label_calendar"
+        style="@style/CustomInfoLabel"
+        android:text="@string/calendario"
+        app:layout_constraintStart_toStartOf="@id/label_birthday"
+        app:layout_constraintTop_toBottomOf="@id/user_info_students_RCV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_info_calendar_RCV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/pad_constraint"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_info_label_barrier"
+        app:layout_constraintTop_toTopOf="@id/label_calendar"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_calendario" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/user_info_calendar_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="user_info_calendar_divisor, label_calendar, user_info_calendar_RCV"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

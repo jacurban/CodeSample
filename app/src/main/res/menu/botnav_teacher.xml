@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/teacher_navigation_messages"
+        android:icon="@drawable/ic_email_black_24dp"
+        android:iconTint="@color/colorWhite"
+        android:title="@string/mensagens" />
+
+    <item
+        android:id="@+id/teacher_navigation_classes"
+        android:icon="@drawable/ic_border_all_white_24dp"
+        android:title="@string/minhas_turmas" />
+
+    <item
+        android:id="@+id/teacher_navigation_events"
+        android:icon="@drawable/ic_bookmark_black_24dp"
+        android:iconTint="@color/colorWhite"
+        android:title="@string/eventos" />
+
+</menu>

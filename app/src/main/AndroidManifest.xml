@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jac.caravela">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         latitude permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".core.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_boat_launch"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_boat_launch"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".scenes.launch.LaunchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".scenes.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.chatnew.NewChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.chatpage.ChatPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.turmatimeline.TurmaTimelineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.matriculainfo.MatriculaInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.studentinfo.StudentInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.turmainfo.TurmaInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.parentinfo.ParentInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.teacherinfo.TeacherInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.coordinfo.CoordInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.personalinfo.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.cursocadastro.CursoCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.turmacadastro.TurmaCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.usercadastro.UserCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.eventocadastro.EventoCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.partnercadastro.PartnerCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.teachercadastro.TeacherCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.studentcadastro.StudentCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.parentcadastro.ParentCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.coordcadastro.CoordCadastroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.cursolist.CursoListaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.turmalist.TurmaListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.parentlist.ParentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.studentlist.StudentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.teacherlist.TeacherListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.coordlist.CoordListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.partner.PartnerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scenes.selectlocation.SelectLocationActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

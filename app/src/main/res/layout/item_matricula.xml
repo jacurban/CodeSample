@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_matricula_CTL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:paddingStart="5dp">
+
+    <TextView
+        android:id="@+id/item_matricula_student_TXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="@dimen/text_size_item_list"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Aluno" />
+
+    <TextView
+        android:id="@+id/item_matricula_course_TXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="@dimen/text_size_item_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_matricula_student_TXV"
+        tools:text="Curso" />
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayDark"
+        app:layout_constraintBottom_toBottomOf="@id/item_matricula_course_TXV"
+        app:layout_constraintStart_toEndOf="@id/item_matricula_course_TXV"
+        app:layout_constraintTop_toTopOf="@id/item_matricula_course_TXV" />
+
+    <TextView
+        android:id="@+id/item_matricula_class_TXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="@dimen/text_size_item_list"
+        app:layout_constraintStart_toEndOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/item_matricula_student_TXV"
+        tools:text="Turma" />
+
+    <View
+        android:id="@+id/matricula_view_divisor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorBlueSoft"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/item_matricula_course_TXV" />
+
+    <ImageView
+        android:id="@+id/matricula_ic_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_go"
+        android:tint="@color/colorGrayDark"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

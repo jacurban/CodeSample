@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/item_relatorio_date_TXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/item_relatorio_bottom_divisor"
+        app:layout_constraintEnd_toStartOf="@id/item_relatorio_midle_divisor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mes" />
+
+    <View
+        android:id="@+id/item_relatorio_midle_divisor"
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:background="@color/colorGrayDark"
+        app:layout_constraintBottom_toTopOf="@id/item_relatorio_bottom_divisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_relatorio_content_TXV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/item_relatorio_bottom_divisor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_relatorio_midle_divisor"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="quantidade" />
+
+    <View
+        android:id="@+id/item_relatorio_bottom_divisor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlueSoft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/matricula_toolbarLayout"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/matricula_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/aprove_reject_LNL"
+        app:layout_constraintTop_toBottomOf="@id/matricula_toolbarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_parents_data"
+                style="@style/CustomInfoLabel"
+                android:text="@string/responsavel_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/parent_label_name"
+                style="@style/CustomInfoLabel"
+                android:layout_marginStart="20dp"
+                android:text="@string/nome_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_parents_data" />
+
+            <TextView
+                android:id="@+id/matricula_parent_name_TXV"
+                style="@style/CustomInfoContent"
+                android:text="@string/nome_dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@id/parent_label_birth"
+                app:layout_constraintTop_toTopOf="@id/parent_label_name" />
+
+            <TextView
+                android:id="@+id/parent_label_birth"
+                style="@style/CustomInfoLabel"
+                android:text="@string/nascimento_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/parent_label_name" />
+
+            <TextView
+                android:id="@+id/matricula_parent_birth_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/nascimento_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/parent_label_birth" />
+
+            <TextView
+                android:id="@+id/parent_label_cpf"
+                style="@style/CustomInfoLabel"
+                android:text="@string/cpf_rg_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/parent_label_birth" />
+
+            <TextView
+                android:id="@+id/matricula_parent_cpf_TXV"
+                style="@style/CustomInfoContent"
+                android:text="@string/cpf_rg_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/parent_label_cpf" />
+
+            <TextView
+                android:id="@+id/parent_label_phone"
+                style="@style/CustomInfoLabel"
+                android:text="@string/telefone_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/parent_label_cpf" />
+
+            <TextView
+                android:id="@+id/matricula_parent_phone_TXV"
+                style="@style/CustomInfoContent"
+                android:text="@string/telefone_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/parent_label_phone" />
+
+            <TextView
+                android:id="@+id/parent_label_email"
+                style="@style/CustomInfoLabel"
+                android:text="@string/email_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/parent_label_phone" />
+
+            <TextView
+                android:id="@+id/matricula_parent_email_TXV"
+                style="@style/CustomInfoContent"
+                android:text="@string/email_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/parent_label_email" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/parent_label_email" />
+
+            <TextView
+                android:id="@+id/label_student_data"
+                style="@style/CustomInfoLabel"
+                android:layout_marginTop="15dp"
+                android:text="@string/aluno_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/parent_label_email" />
+
+            <TextView
+                android:id="@+id/student_label_name"
+                style="@style/CustomInfoLabel"
+                android:text="@string/nome_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_student_data" />
+
+            <TextView
+                android:id="@+id/matricula_student_name_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/nome_dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/student_label_name" />
+
+            <TextView
+                android:id="@+id/student_label_birth"
+                style="@style/CustomInfoLabel"
+                android:text="@string/nascimento_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/student_label_name" />
+
+            <TextView
+                android:id="@+id/matricula_student_birth_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/nascimento_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/student_label_birth" />
+
+            <TextView
+                android:id="@+id/student_label_cpf"
+                style="@style/CustomInfoLabel"
+                android:text="@string/cpf_rg_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/student_label_birth" />
+
+            <TextView
+                android:id="@+id/matricula_student_CPF_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/cpf_rg_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/student_label_cpf" />
+
+            <TextView
+                android:id="@+id/student_label_phone"
+                style="@style/CustomInfoLabel"
+                android:text="@string/telefone_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/student_label_cpf" />
+
+            <TextView
+                android:id="@+id/matricula_student_phone_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/telefone_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/student_label_phone" />
+
+            <TextView
+                android:id="@+id/student_label_email"
+                style="@style/CustomInfoLabel"
+                android:text="@string/email_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/student_label_phone" />
+
+            <TextView
+                android:id="@+id/matricula_student_email_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/email_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/student_label_email" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/student_label_email" />
+
+            <TextView
+                android:id="@+id/label_class_data"
+                style="@style/CustomInfoLabel"
+                android:layout_marginTop="15dp"
+                android:text="@string/matricula_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/student_label_email" />
+
+            <TextView
+                android:id="@+id/matricula_course_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/curso_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/course_label" />
+
+            <TextView
+                android:id="@+id/course_label"
+                style="@style/CustomInfoLabel"
+                android:text="@string/curso_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_class_data" />
+
+            <TextView
+                android:id="@+id/matricula_class_TVT"
+                style="@style/CustomInfoContent"
+                android:text="@string/turma_dp"
+                app:layout_constraintStart_toStartOf="@id/matricula_parent_name_TXV"
+                app:layout_constraintTop_toTopOf="@id/class_label" />
+
+            <TextView
+                android:id="@+id/class_label"
+                style="@style/CustomInfoLabel"
+                android:text="@string/turma_dp"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"
+                app:layout_constraintTop_toBottomOf="@id/course_label" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/class_label" />
+
+            <TextView
+                android:id="@+id/label_payment_data"
+                style="@style/CustomInfoLabel"
+                android:layout_marginTop="15dp"
+                android:text="@string/status_mensalidades_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/class_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/matricula_payment_RCV"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/label_payment_data"
+                app:layout_constraintStart_toStartOf="@id/parent_label_name"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/aprove_reject_LNL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/matricula_scroll">
+
+        <Button
+            android:id="@+id/matricula_reject_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:backgroundTint="@color/colorRed"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/rejeitar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/matricula_aprove_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:backgroundTint="@color/colorGreen"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="@string/aceitar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/matricula_finish_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textAllCaps="false"
+            android:background="@drawable/round_corner_button_clickable"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/encerrar_martricula"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

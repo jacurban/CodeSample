@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/personal_info_toolbarLayout"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/personal_info_SV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/personal_info_toolbarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/personal_info_container1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/pad_constraint"
+            android:paddingTop="16dp"
+            android:paddingEnd="@dimen/pad_constraint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personal_info_toolbarLayout">
+
+            <TextView
+                android:id="@+id/label_perfil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/perfil"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/round_bckg_light_red"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_birthday"
+                style="@style/CustomInfoLabel"
+                android:text="@string/nascimento_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_perfil" />
+
+            <TextView
+                android:id="@+id/personal_info_birth_TXV"
+                style="@style/CustomInfoContent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@+id/label_birthday" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/birth_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="label_birthday, personal_info_birth_TXV" />
+
+            <TextView
+                android:id="@+id/label_cpf"
+                style="@style/CustomInfoLabel"
+                android:text="@string/cpf_rg_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/personal_info_birth_TXV" />
+
+            <TextView
+                android:id="@+id/personal_info_cpf_TXV"
+                style="@style/CustomInfoContent"
+                app:layout_constraintStart_toEndOf="@id/label_cpf"
+                app:layout_constraintTop_toTopOf="@id/label_cpf" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/cpf_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="label_cpf, personal_info_cpf_TXV" />
+
+            <TextView
+                android:id="@+id/label_phone"
+                style="@style/CustomInfoLabel"
+                android:text="@string/telefone_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_cpf" />
+
+            <TextView
+                android:id="@+id/personal_info_phone_TXV"
+                style="@style/CustomInfoContent"
+                app:layout_constraintStart_toEndOf="@id/label_phone"
+                app:layout_constraintTop_toTopOf="@+id/label_phone" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/phone_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="label_phone, personal_info_phone_TXV" />
+
+            <TextView
+                android:id="@+id/label_email"
+                style="@style/CustomInfoLabel"
+                android:text="@string/email_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_phone" />
+
+            <TextView
+                android:id="@+id/personal_info_email_TXV"
+                style="@style/CustomInfoContent"
+                app:layout_constraintStart_toEndOf="@id/label_email"
+                app:layout_constraintTop_toTopOf="@+id/label_email" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/email_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="label_email, personal_info_email_TXV" />
+
+            <TextView
+                android:id="@+id/label_about"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/about_us"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/round_bckg_light_red"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+            <TextView
+                android:id="@+id/about_description"
+                style="@style/CustomInfoContent"
+                android:gravity="center_horizontal"
+                android:text="@string/about_us_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_about" />
+
+            <TextView
+                android:id="@+id/label_partners"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/parceiros"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/round_bckg_light_red"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/about_description" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/personal_info_RCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_partners"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_parceiros" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/personal_info_logout_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bckg_light_red"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/logout"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

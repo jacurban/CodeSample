@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/partner_cadastro_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="false"
+        android:paddingStart="@dimen/pad_constraint"
+        android:paddingEnd="@dimen/pad_constraint"
+        app:layout_constraintTop_toBottomOf="@id/partner_cadastro_toolbar">
+
+        <TextView
+            android:id="@+id/label_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_cadastro"
+            android:text="@string/parceiro_dp"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/parceiro_cadastro_name_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="@dimen/pad_cadastro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_partner"
+            app:layout_constraintTop_toTopOf="@+id/label_partner" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlueSoft"
+            app:layout_constraintTop_toBottomOf="@id/label_partner" />
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_cadastro"
+            android:text="@string/email_dp"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_partner" />
+
+        <EditText
+            android:id="@+id/parceiro_cadastro_email_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            android:padding="@dimen/pad_cadastro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_partner"
+            app:layout_constraintTop_toTopOf="@+id/label_email" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayDark"
+            app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+
+        <TextView
+            android:id="@+id/label_cnpj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_cadastro"
+            android:text="@string/cnpj_dp"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_email" />
+
+        <EditText
+            android:id="@+id/parceiro_cadastro_cnpj_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            android:padding="@dimen/pad_cadastro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_partner"
+            app:layout_constraintTop_toTopOf="@+id/label_cnpj" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayDark"
+            app:layout_constraintTop_toBottomOf="@id/label_cnpj" />
+
+
+        <TextView
+            android:id="@+id/label_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_cadastro"
+            android:text="@string/descricao_dp"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label_cnpj" />
+
+        <EditText
+            android:id="@+id/parceiro_cadastro_description_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            android:padding="@dimen/pad_cadastro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_partner"
+            app:layout_constraintTop_toTopOf="@+id/label_description" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayDark"
+            app:layout_constraintTop_toBottomOf="@id/parceiro_cadastro_description_EDT" />
+
+        <Button
+            android:id="@+id/parceiro_cadastro_save_BTN"
+            style="@style/CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/finish_registration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/parceiro_cadastro_description_EDT" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

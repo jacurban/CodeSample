@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorToolbar">#2f3a54</color>
+    <color name="colorPrimary">#d25759</color>
+    <color name="colorSecond">#D39091</color>
+
+    <color name="colorPrimaryDark">#252D41</color>
+    <color name="colorAccent">#dc9d32</color>
+    <color name="colorPrimarySoft">#B4D25759</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGrayDark">#5e5e5e</color>
+    <color name="colorGray">#eae4ba</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGraySoft">#ececec</color>
+    <color name="colorRed">#FF0000</color>
+    <color name="colorBlueLink">#3399FF</color>
+    <color name="colorGreen">#10F100</color>
+    <color name="colorBlueSoft">#CCD0E4</color>
+</resources>
+
+
+<!--<color name="colorPrimary">#c30000</color>-->
+<!--<color name="colorPrimaryDark">#9f0303</color>-->
+<!--<color name="colorAccent">#ff0000</color>-->
+<!--<color name="colorWhite">#ffffff</color>-->
+<!--<color name="colorWhiteLight">#16ffffff</color>-->
+<!--<color name="colorBlueLight">#f8fdfe</color>-->
+<!--<color name="colorPinkLight">#feeae6</color>-->
+<!--<color name="colorGrayDark">#5e5e5e</color>-->
+<!--<color name="colorGray">#979797</color>-->
+<!--<color name="colorGrayLight">#30000000</color>-->
+<!--<color name="colorBlackLight">#ba000000</color>-->
+<!--<color name="colorBlack">#000000</color>-->
+<!--<color name="colorGraySoft">#ececec</color>-->
+<!--<color name="colorRedLight">#66ff0000</color>-->
+<!--<color name="colorBlue">#6666FF</color>-->
+<!--<color name="colorBlueLink">#3399FF</color>-->
+<!--<color name="colorGreen">#10F100</color>-->
+<!--<color name="colorYellow">#FDD500</color>-->
+<!--<color name="colorBlueSoft">#CCD0E4</color>-->

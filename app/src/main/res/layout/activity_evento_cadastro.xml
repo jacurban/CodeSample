@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/evento_cadastro_toolbarLayout"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/pad_constraint"
+            android:paddingEnd="@dimen/pad_constraint">
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/evento_cadastro_label_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="label_name, label_description, label_reference"/>
+
+            <TextView
+                android:id="@+id/label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/nome_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/evento_cadastro_name_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/evento_cadastro_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_name" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+            <TextView
+                android:id="@+id/label_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/descricao_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_name" />
+
+            <EditText
+                android:id="@+id/evento_cadastro_information_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/evento_cadastro_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_description" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintTop_toBottomOf="@id/evento_cadastro_information_EDT" />
+
+            <TextView
+                android:id="@+id/label_reference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/referencias_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/label_description" />
+
+            <EditText
+                android:id="@+id/evento_cadastro_reference_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_reference"
+                app:layout_constraintTop_toTopOf="@+id/label_reference" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintTop_toBottomOf="@id/label_reference" />
+
+            <Button
+                android:id="@+id/evento_cadastro_local_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_map"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="10dp"
+                android:foreground="?android:selectableItemBackgroundBorderless"
+                android:text="@string/select_location"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_reference" />
+
+            <View
+                android:id="@+id/evento_cadastro_location_status"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/selector_location_pick"
+                app:layout_constraintBottom_toBottomOf="@id/evento_cadastro_local_BTN"
+                app:layout_constraintStart_toEndOf="@id/evento_cadastro_local_BTN"
+                app:layout_constraintTop_toTopOf="@id/evento_cadastro_local_BTN" />
+
+            <Button
+                android:id="@+id/datepickerBTN"
+                style="@style/CustomSmallButton"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/select_day"
+                app:layout_constraintEnd_toStartOf="@id/timepickerBTN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/evento_cadastro_local_BTN" />
+
+            <Button
+                android:id="@+id/timepickerBTN"
+                style="@style/CustomSmallButton"
+                android:layout_width="wrap_content"
+                android:text="@string/select_hour"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/datepickerBTN"
+                app:layout_constraintTop_toTopOf="@id/datepickerBTN" />
+
+            <Button
+                android:id="@+id/evento_cadastro_save_BTN"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/finish_registration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/datepickerBTN"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

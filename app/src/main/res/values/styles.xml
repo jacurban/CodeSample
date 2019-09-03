@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="LaunchTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_launch</item>
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/colorWhite</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="CustomButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingEnd">30dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/round_corner_button_clickable</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="CustomSmallButton">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/round_buttom_colored</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="CustomInfoLabel">
+        <item name= "android:layout_width">wrap_content</item>
+        <item name= "android:layout_height">wrap_content</item>
+        <item name= "android:padding">@dimen/pad_info</item>
+        <item name= "android:textColor">@color/colorGrayDark</item>
+        <item name= "android:textSize">@dimen/text_size_label</item>
+    </style>
+
+    <style name="CustomInfoContent">
+        <item name= "android:layout_width">wrap_content</item>
+        <item name= "android:layout_height">wrap_content</item>
+        <item name= "android:padding">@dimen/pad_info</item>
+        <item name= "android:textColor">@color/colorBlack</item>
+        <item name= "android:textSize">@dimen/text_size_label</item>
+    </style>
+
+</resources>

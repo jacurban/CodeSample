@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/parents_navigation_map"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:iconTint="@color/colorWhite"
+        android:title="@string/turmas" />
+    <item
+        android:id="@+id/parents_navigation_messages"
+        android:icon="@drawable/ic_email_black_24dp"
+        android:iconTint="@color/colorWhite"
+        android:title="@string/mensagens" />
+
+    <item
+        android:id="@+id/parents_navigation_students"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:iconTint="@color/colorWhite"
+        android:title="@string/alunos" />
+
+    <item
+        android:id="@+id/parents_navigation_events"
+        android:icon="@drawable/ic_bookmark_black_24dp"
+        android:iconTint="@color/colorWhite"
+        android:title="@string/eventos" />
+
+</menu>

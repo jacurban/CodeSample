@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/user_cadastro_toolbarLayout"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/nome_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/user_cadastro_name_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@+id/label_name" />
+
+            <TextView
+                android:id="@+id/label_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/nascimento_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_name"
+                app:layout_constraintTop_toBottomOf="@id/user_cadastro_name_EDT" />
+
+            <TextView
+                android:id="@+id/user_cadastro_birth_TXT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@+id/label_birthday" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.8dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintStart_toStartOf="@id/user_cadastro_birth_TXT"
+                app:layout_constraintEnd_toEndOf="@id/user_cadastro_birth_TXT"
+                app:layout_constraintBottom_toBottomOf="@id/user_cadastro_birth_TXT" />
+
+            <TextView
+                android:id="@+id/label_cpf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/cpf_rg_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_birthday"
+                app:layout_constraintTop_toBottomOf="@id/user_cadastro_birth_TXT" />
+
+            <EditText
+                android:id="@+id/user_cadastro_cpf_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                android:maxLength="11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@id/label_cpf" />
+
+            <TextView
+                android:id="@+id/label_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/telefone_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_cpf"
+                app:layout_constraintTop_toBottomOf="@id/user_cadastro_cpf_EDT" />
+
+            <EditText
+                android:id="@+id/user_cadastro_phone_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@+id/label_phone" />
+
+            <TextView
+                android:id="@+id/label_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/email_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_phone"
+                app:layout_constraintTop_toBottomOf="@id/user_cadastro_phone_EDT" />
+
+            <EditText
+                android:id="@+id/user_cadastro_email_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@+id/label_email" />
+
+            <TextView
+                android:id="@+id/label_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/senha"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_email"
+                app:layout_constraintTop_toBottomOf="@id/user_cadastro_email_EDT" />
+
+            <EditText
+                android:id="@+id/user_cadastro_password_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintBottom_toBottomOf="@id/label_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_birthday"
+                app:layout_constraintTop_toTopOf="@+id/label_password" />
+
+            <Button
+                android:id="@+id/user_cadastro_register_BTN"
+                style="@style/CustomButton"
+                android:layout_width="match_parent"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/finish_registration"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_cadastro_password_EDT"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

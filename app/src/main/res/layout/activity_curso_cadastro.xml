@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar">
+
+        <TextView
+            android:id="@+id/label_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_cadastro"
+            android:text="@string/curso_dp"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/curso_cadastro_class_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="@dimen/pad_cadastro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_reference"
+            app:layout_constraintTop_toTopOf="@+id/label_class" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlueSoft"
+            app:layout_constraintTop_toBottomOf="@id/curso_cadastro_class_EDT" />
+
+        <TextView
+            android:id="@+id/label_reference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pad_cadastro"
+            android:text="@string/descricao_dp"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="@dimen/text_size_label"
+            app:layout_constraintStart_toStartOf="@id/label_class"
+            app:layout_constraintTop_toBottomOf="@id/curso_cadastro_class_EDT" />
+
+        <EditText
+            android:id="@+id/curso_cadastro_description_EDT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType=""
+            android:padding="@dimen/pad_cadastro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_custom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_reference"
+            app:layout_constraintTop_toTopOf="@+id/label_reference" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlueSoft"
+            app:layout_constraintTop_toBottomOf="@id/curso_cadastro_description_EDT" />
+
+        <Button
+            android:id="@+id/curso_cadastro_save_BTN"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:text="@string/finish_registration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/curso_cadastro_description_EDT" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

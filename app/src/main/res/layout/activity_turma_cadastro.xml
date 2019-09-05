@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/turma_cadastro_toolbarLayout"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/turma_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/turma_cadastro_class_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_reference"
+                app:layout_constraintTop_toTopOf="@+id/label_class" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/turma_cadastro_class_EDT" />
+
+            <Button
+                android:id="@+id/turma_cadastro_local_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_map"
+                android:drawablePadding="10dp"
+                android:foreground="?android:selectableItemBackgroundBorderless"
+                android:text="@string/select_location"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/label_class" />
+
+            <View
+                android:id="@+id/map_selection_status"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/selector_location_pick"
+                app:layout_constraintBottom_toBottomOf="@id/turma_cadastro_local_BTN"
+                app:layout_constraintStart_toEndOf="@id/turma_cadastro_local_BTN"
+                app:layout_constraintTop_toTopOf="@id/turma_cadastro_local_BTN" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/turma_cadastro_local_BTN" />
+
+            <TextView
+                android:id="@+id/label_reference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/referencias_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="@id/label_class"
+                app:layout_constraintTop_toBottomOf="@id/turma_cadastro_local_BTN" />
+
+            <EditText
+                android:id="@+id/turma_cadastro_reference_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_reference"
+                app:layout_constraintTop_toTopOf="@+id/label_reference" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/turma_cadastro_reference_EDT" />
+
+            <TextView
+                android:id="@+id/label_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/professor_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/turma_cadastro_reference_EDT" />
+
+            <Spinner
+                android:id="@+id/turma_cadastro_teacher_SPN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintBottom_toBottomOf="@id/label_teacher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_reference"
+                app:layout_constraintTop_toTopOf="@+id/label_teacher" />
+
+            <TextView
+                android:id="@+id/label_monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/mensalidade"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_teacher" />
+
+            <EditText
+                android:id="@+id/turma_cadastro_payment_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_monthly"
+                app:layout_constraintTop_toTopOf="@+id/label_monthly" />
+
+            <TextView
+                android:id="@+id/label_initialdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/inicio_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_monthly" />
+
+            <TextView
+                android:id="@+id/turma_cadastro_initialdate_EDT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:importantForAccessibility="no"
+                android:inputType="date"
+                android:padding="@dimen/pad_cadastro"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_initialdate"
+                app:layout_constraintTop_toTopOf="@+id/label_initialdate" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0.8dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorGrayDark"
+                app:layout_constraintStart_toStartOf="@id/turma_cadastro_initialdate_EDT"
+                app:layout_constraintEnd_toEndOf="@id/turma_cadastro_initialdate_EDT"
+                app:layout_constraintBottom_toBottomOf="@id/turma_cadastro_initialdate_EDT"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/label_initialdate" />
+
+            <TextView
+                android:id="@+id/label_aulas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pad_cadastro"
+                android:text="@string/lessons_dp"
+                android:textColor="@color/colorGrayDark"
+                android:textSize="@dimen/text_size_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_initialdate" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/turma_cadastro_lessons_RCV"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:fadeScrollbars="false"
+                android:padding="@dimen/pad_cadastro"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/label_reference"
+                app:layout_constraintTop_toTopOf="@id/label_aulas"
+                tools:listitem="@layout/item_list"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@id/turma_cadastro_add_BTN"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/turma_cadastro_lessons_RCV">
+
+                <TextView
+                    android:id="@+id/label_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="@string/dia"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="@dimen/text_size_label"
+                    app:layout_constraintEnd_toStartOf="@id/label_hour"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/label_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="@string/hora"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="@dimen/text_size_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/label_day" />
+
+                <TextView
+                    android:id="@+id/label_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="@string/minuto"
+                    android:textColor="@color/colorGrayDark"
+                    android:textSize="@dimen/text_size_label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/label_hour"
+                    app:layout_constraintTop_toTopOf="@id/label_day" />
+
+                <Spinner
+                    android:id="@+id/turma_cadastro_day_SPN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:inputType="datetime"
+                    android:padding="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_custom"
+                    app:layout_constraintEnd_toEndOf="@id/label_day"
+                    app:layout_constraintStart_toStartOf="@id/label_day"
+                    app:layout_constraintTop_toBottomOf="@id/label_day" />
+
+                <Spinner
+                    android:id="@+id/turma_cadastro_hour_SPN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:inputType="datetime"
+                    android:padding="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_custom"
+                    app:layout_constraintEnd_toEndOf="@id/label_hour"
+                    app:layout_constraintStart_toStartOf="@id/label_hour"
+                    app:layout_constraintTop_toBottomOf="@id/label_hour" />
+
+                <Spinner
+                    android:id="@+id/turma_cadastro_minute_SPN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:inputType="datetime"
+                    android:padding="15dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_custom"
+                    app:layout_constraintEnd_toEndOf="@id/label_minute"
+                    app:layout_constraintStart_toStartOf="@id/label_minute"
+                    app:layout_constraintTop_toBottomOf="@id/label_minute" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/container2" />
+
+            <Button
+                android:id="@+id/turma_cadastro_add_BTN"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_corner_button_clickable"
+                android:foreground="?android:selectableItemBackground"
+                android:text="@string/add"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/container2" />
+
+            <Button
+                android:id="@+id/turma_cadastro_save_BTN"
+                style="@style/CustomButton"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="@string/finish_registration"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

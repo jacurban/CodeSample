@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">CodeSample</string>
+    <string name="minhas_turmas">Minhas Turmas</string>
+    <string name="turmas">Turmas</string>
+    <string name="relatorios">Relatórios</string>
+    <string name="cadastros">Cadastros</string>
+    <string name="alunos">Alunos</string>
+    <string name="matriculas">Matrículas</string>
+    <string name="mensagens">Mensagens</string>
+    <string name="professor_dp">Professor:</string>
+    <string name="select_location">Selecionar Local</string>
+    <string name="dia_e_hora_dp">Dia e hora:</string>
+    <string name="referencias_dp">Referência:</string>
+    <string name="new_chat">Iniciar Chat</string>
+    <string name="alunos_dp">Alunos:</string>
+    <string name="finish_registration">Finalizar Cadastro</string>
+    <string name="turma_dp">Turma:</string>
+    <string name="nome_dp">Nome:</string>
+    <string name="nascimento_dp">Nascimento:</string>
+    <string name="cpf_rg_dp">CPF:</string>
+    <string name="email_dp">Email:</string>
+    <string name="telefone_dp">Telefone:</string>
+    <string name="curso_dp">Curso:</string>
+    <string name="descricao_dp">Descrição:</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="register">Cadastrar</string>
+    <string name="my_register">Meu Cadastro</string>
+    <string name="digite_aqui">Digite aqui…</string>
+    <string name="responsaveis">Responsáveis</string>
+    <string name="professores">Professores</string>
+    <string name="cursos_e_turmas">Cursos e turmas</string>
+    <string name="eventos">Eventos</string>
+    <string name="parceiros">Parceiros</string>
+    <string name="novo_aluno">Novo aluno</string>
+    <string name="coordenador">Coordenador</string>
+    <string name="turma">Turma</string>
+    <string name="responsavel_dp">Responsável:</string>
+    <string name="aluno_dp">Aluno:</string>
+    <string name="matricula_dp">Matrícula:</string>
+    <string name="aceitar">Aceitar</string>
+    <string name="rejeitar">Rejeitar</string>
+    <string name="dia">Dia</string>
+    <string name="hora">Hora</string>
+    <string name="minuto">Minuto</string>
+    <string name="lessons_dp">Aulas:</string>
+    <string name="add">Add</string>
+    <string name="inicio_dp">Início:</string>
+    <string name="fim_dp">Fim:</string>
+    <string name="efetuar_inscricao">Efetuar Inscrição</string>
+    <string name="calendario">Calendário</string>
+    <string name="aluno">Aluno</string>
+    <string name="deleted_user">Usuário deletado</string>
+    <string name="professor">Professor</string>
+    <string name="responsavel">Responsável</string>
+    <string name="administrador">Administrador</string>
+    <string name="coordenadores">Coordenadores</string>
+    <string name="tipo_dp">Tipo:</string>
+    <string name="voce">Você</string>
+    <string name="novo_coordenador">Novo Coordenador</string>
+    <string name="novo_responsavel">Novo Responsável</string>
+    <string name="novo_professor">Novo Professor</string>
+    <string name="editar">Editar</string>
+    <string name="cursos">Cursos</string>
+    <string name="novo_curso">Novo Curso</string>
+    <string name="novo_evento">Novo Evento</string>
+    <string name="nova_turma">Nova Turma</string>
+    <string name="perfil">Perfil</string>
+    <string name="about_us">About Us</string>
+    <string name="parceiro_dp">Parceiro:</string>
+    <string name="cnpj_dp">CNPJ:</string>
+    <string name="novo_parceiro">Novo Parceiro</string>
+    <string name="confirm_location">Confirmar localização?</string>
+    <string name="yes">Sim</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">Ok</string>
+    <string name="selected_position">Posição Selecionada</string>
+    <string name="selected_position_description">Essa é a posição que vai ser usada no cadastro.</string>
+    <string name="about_us_body">Este é um aplicativo que proporciona a interação entre a comunidade e a escola através de cursos proporcionados pela mesma</string>
+    <string name="report_no_item">Não há dados na data requisitada</string>
+    <string name="location_premission">Habilite a localização para ver sua posição no mapa</string>
+    <string name="select_location_warning">Navegue no mapa para encontrar a localização desejada. Ao encontrar pressione o local para selecionar.</string>
+    <string name="no_enrolled_student">Ainda não há alunos matriculados na turma.</string>
+    <string name="responsible_with_no_students">Não há alunos vinculados ao responsável.</string>
+    <string name="select_student">Selecione o aluno:</string>
+    <string name="select_day">Selecione o Dia</string>
+    <string name="select_hour">Selecione a hora</string>
+    <string name="alert_dialog_confirm_enrollment_title">Confirmar Matrícula</string>
+    <string name="alert_dialog_enrollment_description_1">Deseja matricular o aluno </string>
+    <string name="alert_dialog_enrollment_description_2">na turma</string>
+    <string name="alert_dialog_enrollment_description_3">do curso</string>
+    <string name="alert_dialog_enrollment_contirmation">Confirmação</string>
+    <string name="alert_dialog_enrollment_acceptance">Deseja aceitar essa matrícula?</string>
+    <string name="alert_dialog_enrollment_rejection">Deseja rejeitar essa matrícula?</string>
+    <string name="alert_dialog_delete_description">Deseja deletar</string>
+    <string name="alert_dialog_delete_description2">Ao deletar o curso</string>
+    <string name="alert_dialog_delete_description3">todas as suas turmas serão deletadas automaticamente.</string>
+    <string name="alert_dialog_delete_description4">Deseja deletar o curso</string>
+    <string name="alert_dialog_atention_title">Atenção</string>
+    <string name="alert_dialog_enrollment_information">Seu pedido de matrícula está em análise, e será aprovado assim
+        que recebermos a confirmação do primeiro pagamento. O não pagamento das mensalidades implica na expulsão do aluno
+        da turma.</string>
+    <string name="meus_alunos">Meus Alunos</string>
+    <string name="pagamentos">Pagamentos</string>
+    <string name="alert_dialog_enrollment_finish">O encerramento desta matrícula implica na expulsão desse aluno nessa turma.
+        Ao confirmá-lo este aluno não mais aparecerá na lista de alunos desta turma. Deseja confirmar o encerramento desta
+        matrícula?</string>
+
+
+    <string-array name="report_types">
+        //0
+        <item>Novas Matriculas</item>
+        //1
+        <item>Novas Turmas</item>
+        //2
+        <item>Comentarios feitos</item>
+        //3
+        <item>Mensagens enviadas</item>
+        //4
+        <item>Usuários cadastrados</item>
+        //5
+        <item>Estudantes cadastrados</item>
+    </string-array>
+
+    <!-- Errors -->
+    <string name="error_network">Verifique sua conexão com a internet e tente novamente.</string>
+    <string name="error_unspecified">Algo deu errado, tente novamente mais tarde.</string>
+    <string name="error_invalid_token">Pedimos que, por segurança, faça login novamente.</string>
+    <string name="error_report_wrong_date">Selecione um intervalo de tempo válido</string>
+    <string name="error_empty_fields">Preencher todas as informações antes de prosseguir</string>
+    <string name="error_invalid_email">Email inválido</string>
+    <string name="error_empty">Campo não pode ser vazio</string>
+    <string name="error_no_students">Você não possui estudantes cadastrados para matricular.</string>
+    <string name="error_invalid_password">A senha deve possuir de 6 a 12 caracteres.</string>
+    <string name="vencimento_em">Vencimento em</string>
+    <string name="status_mensalidades_dp">Status das Mensalidades:</string>
+    <string name="encerrar_martricula">Encerrar Martrícula</string>
+    <string name="parcela">Parcela de</string>
+    <string name="real">R$</string>
+    <string name="mensalidade">Mensalidade:</string>
+    <string name="duracao_dp">Duração:</string>
+    <string name="_4_meses">4 meses</string>
+
+
+</resources>

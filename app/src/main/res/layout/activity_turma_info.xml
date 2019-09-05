@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp">
+
+            <include
+                android:id="@+id/turma_info_toolbarLayout"
+                layout="@layout/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <fragment
+                android:id="@+id/turma_info_map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_toolbarLayout" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_map" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/turma_info_label_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="label_teacher, label_reference, label_course, label_lessons, label_students, label_payment" />
+
+            <TextView
+                android:id="@+id/label_teacher"
+                style="@style/CustomInfoLabel"
+                android:layout_marginStart="@dimen/pad_constraint"
+                android:text="@string/professor_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_map" />
+
+            <TextView
+                android:id="@+id/turma_info_teacher_TXV"
+                style="@style/CustomInfoContent"
+                android:layout_marginEnd="@dimen/pad_constraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_teacher"
+                tools:text="@string/professor_dp" />
+
+            <TextView
+                android:id="@+id/label_reference"
+                style="@style/CustomInfoLabel"
+                android:text="@string/referencias_dp"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_teacher_TXV" />
+
+            <TextView
+                android:id="@+id/turma_info_reference_TXV"
+                style="@style/CustomInfoContent"
+                android:layout_marginEnd="@dimen/pad_constraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_reference"
+                tools:text="@string/referencias_dp" />
+
+            <TextView
+                android:id="@+id/label_course"
+                style="@style/CustomInfoLabel"
+                android:text="@string/curso_dp"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_reference_TXV" />
+
+            <TextView
+                android:id="@+id/turma_info_course_TXV"
+                style="@style/CustomInfoContent"
+                android:layout_marginEnd="@dimen/pad_constraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_course"
+                tools:text="@string/curso_dp" />
+
+            <TextView
+                android:id="@+id/label_payment"
+                style="@style/CustomInfoLabel"
+                android:text="@string/mensalidade"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/label_course" />
+
+            <TextView
+                android:id="@+id/real"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_label"
+                android:paddingTop="@dimen/pad_info"
+                android:paddingStart="@dimen/pad_info"
+                android:paddingBottom="@dimen/pad_info"
+                android:text="@string/real"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_payment"
+                />
+
+            <TextView
+                android:id="@+id/turma_info_payment_TXV"
+                style="@style/CustomInfoContent"
+                android:layout_marginEnd="@dimen/pad_constraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/real"
+                app:layout_constraintTop_toTopOf="@+id/label_payment"
+                tools:text="valor" />
+
+            <TextView
+                android:id="@+id/label_duration"
+                style="@style/CustomInfoLabel"
+                android:text="@string/duracao_dp"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/label_payment" />
+
+            <TextView
+                android:id="@+id/turma_info_duration_TXV"
+                style="@style/CustomInfoContent"
+                android:layout_marginEnd="@dimen/pad_constraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_duration"
+                android:text="@string/_4_meses" />
+
+            <TextView
+                android:id="@+id/label_start"
+                style="@style/CustomInfoLabel"
+                android:text="@string/inicio_dp"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/label_duration" />
+
+            <TextView
+                android:id="@+id/turma_info_start_TXV"
+                style="@style/CustomInfoContent"
+                android:layout_marginEnd="@dimen/pad_constraint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_start"
+                tools:text="data" />
+
+            <View
+                android:id="@+id/turma_info_lessons_divisor"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintTop_toBottomOf="@id/label_start" />
+
+            <TextView
+                android:id="@+id/label_lessons"
+                style="@style/CustomInfoLabel"
+                android:padding="10dp"
+                android:text="@string/lessons_dp"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_lessons_divisor" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/turma_info_lessons_RCV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:maxHeight="200dp"
+                android:text="@string/alunos_dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_lessons"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_list" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/turma_info_lessons_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="label_lessons, turma_info_lessons_RCV" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/turma_info_lessons_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="turma_info_lessons_divisor, label_lessons, turma_info_lessons_RCV" />
+
+            <View
+                android:id="@+id/turma_info_students_divisor"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlueSoft"
+                app:layout_constraintBottom_toBottomOf="@id/turma_info_lessons_barrier" />
+
+            <TextView
+                android:id="@+id/label_students"
+                style="@style/CustomInfoLabel"
+                android:text="@string/alunos_dp"
+                app:layout_constraintStart_toStartOf="@id/label_teacher"
+                app:layout_constraintTop_toBottomOf="@id/turma_info_lessons_RCV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/turma_info_students_RCV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:text="@string/alunos_dp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_custom"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/turma_info_label_barrier"
+                app:layout_constraintTop_toTopOf="@+id/label_students"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_list" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/turma_info_students_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="label_students, turma_info_students_RCV" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/turma_info_register_BTN"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/efetuar_inscricao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

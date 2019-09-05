@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/frag_cadastro_parent_BTN"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:drawableEnd="@drawable/ic_go"
+            android:elevation="@dimen/elevation"
+            android:padding="10dp"
+            android:text="@string/responsaveis"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/frag_cadastro_student_BTN"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:drawableEnd="@drawable/ic_go"
+            android:elevation="@dimen/elevation"
+            android:padding="10dp"
+            android:text="@string/alunos"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frag_cadastro_parent_BTN" />
+
+        <Button
+            android:id="@+id/frag_cadastro_teacher_BTN"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:drawableEnd="@drawable/ic_go"
+            android:elevation="@dimen/elevation"
+            android:padding="10dp"
+            android:text="@string/professores"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frag_cadastro_student_BTN" />
+
+        <Button
+            android:id="@+id/frag_cadastro_classes_BTN"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:drawableEnd="@drawable/ic_go"
+            android:elevation="@dimen/elevation"
+            android:padding="10dp"
+            android:text="@string/cursos_e_turmas"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frag_cadastro_teacher_BTN" />
+
+        <Button
+            android:id="@+id/frag_cadastro_coord_BTN"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:drawableEnd="@drawable/ic_go"
+            android:elevation="@dimen/elevation"
+            android:padding="10dp"
+            android:text="@string/coordenadores"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/frag_cadastro_classes_BTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/frag_cadastro_partners_BTN"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corner_button_clickable"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:drawableEnd="@drawable/ic_go"
+            android:elevation="@dimen/elevation"
+            android:padding="10dp"
+            android:text="@string/parceiros"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/frag_cadastro_coord_BTN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

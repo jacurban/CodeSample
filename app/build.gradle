@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    signingConfigs {
+        config {
+            storeFile file(var)
+            storePassword 'manifestttodroid'
+            keyAlias = 'manifestttokey0'
+            keyPassword 'manifestttodroid'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.jac.caravela"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 3
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    def retrofitVer = '2.6.0'
+    def constraintLayoutVer = '1.1.3'
+    def roomVer = '1.1.1'
+    def coroutinesVer = '1.2.0'
+    def interceptorVer = '4.0.1'
+    def coreKtxVer = '1.0.2'
+    def fragmentKtxVer = '1.0.0'
+    def appCompatVer = '1.0.2'
+    def materialVer = '1.0.0'
+    def legacySupportVer = '1.0.0'
+    def googleServicesVer = '17.0.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$appCompatVer"
+    implementation "com.google.android.material:material:$materialVer"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupportVer"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
+
+    //ktx
+    implementation "androidx.core:core-ktx:$coreKtxVer"
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtxVer"
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVer"
+
+    //room
+    implementation "android.arch.persistence.room:runtime:$roomVer"
+    kapt "android.arch.persistence.room:compiler:$roomVer"
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVer"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVer"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptorVer"
+
+    //google services
+    implementation "com.google.android.gms:play-services-maps:$googleServicesVer"
+    implementation "com.google.android.gms:play-services-location:$googleServicesVer"
+
+    testImplementation 'junit:junit:4.13-beta-3'
+    androidTestImplementation 'androidx.test:runner:1.3.0-alpha02'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha02'
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/pad_constraint">
+
+    <TextView
+        android:id="@+id/relatorio_label_start"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/inicio_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/relatorio_start_month_SPN"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/relatorio_label_start"
+        app:layout_constraintEnd_toStartOf="@id/relatorio_start_year_SPN"
+        app:layout_constraintStart_toEndOf="@id/relatorio_label_start"
+        app:layout_constraintTop_toTopOf="@id/relatorio_label_start" />
+
+    <Spinner
+        android:id="@+id/relatorio_start_year_SPN"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/relatorio_label_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/relatorio_start_month_SPN"
+        app:layout_constraintTop_toTopOf="@id/relatorio_label_start" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlueSoft"
+        app:layout_constraintTop_toBottomOf="@id/relatorio_label_start" />
+
+
+    <TextView
+        android:id="@+id/relatorio_label_end"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/fim_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relatorio_label_start" />
+
+    <Spinner
+        android:id="@+id/relatorio_end_month_SPN"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/relatorio_label_end"
+        app:layout_constraintEnd_toStartOf="@id/relatorio_end_year_SPN"
+        app:layout_constraintStart_toEndOf="@id/relatorio_label_start"
+        app:layout_constraintTop_toTopOf="@id/relatorio_label_end" />
+
+    <Spinner
+        android:id="@+id/relatorio_end_year_SPN"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/relatorio_label_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/relatorio_end_month_SPN"
+        app:layout_constraintTop_toTopOf="@id/relatorio_label_end" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlueSoft"
+        app:layout_constraintTop_toBottomOf="@id/relatorio_label_end" />
+
+    <Spinner
+        android:id="@+id/relatorio_type_SPN"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/relatorio_report_BTN"
+        app:layout_constraintEnd_toStartOf="@id/relatorio_report_BTN"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/relatorio_report_BTN" />
+
+    <Button
+        android:id="@+id/relatorio_report_BTN"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corner_button_clickable"
+        android:drawableStart="@drawable/ic_receipt_white_24dp"
+        android:paddingStart="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relatorio_label_end" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/relatorio_RCV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relatorio_report_BTN" />
+</androidx.constraintlayout.widget.ConstraintLayout>

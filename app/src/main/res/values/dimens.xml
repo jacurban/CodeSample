@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="margin_fab">16dp</dimen>
+    <dimen name="text_size_label">15sp</dimen>
+    <dimen name="text_size_custom">15sp</dimen>
+    <dimen name="pad_constraint">16dp</dimen>
+    <dimen name="text_size_item_list">15sp</dimen>
+    <dimen name="pad_info">8dp</dimen>
+    <dimen name="pad_cadastro">16dp</dimen>
+    <dimen name="elevation">10dp</dimen>
+
+
+</resources>
